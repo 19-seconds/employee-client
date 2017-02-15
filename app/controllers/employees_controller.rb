@@ -10,7 +10,7 @@ end
 def create
   @employee = Unirest.post("http://localhost:3000/employees.json", :headers => {"Accept"=> "application/json"}, :parameters => {:first_name => params[:first_name], :last_name => params[:last_name], :email=> params[:email], :birthdate => params[:birthdate], :ssn => params[:ssn]}).body
 
-  redirect_to employee_path(@employee["id"])
+  redirect_to :index
 end
 
 def new
