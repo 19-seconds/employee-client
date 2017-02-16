@@ -1,3 +1,12 @@
-<% @employees.each do |employee_hash|%>
-  <%= employee_hash["first_name"]%>
-<% end %>
+<table>
+  <tr>
+    <td>First Name</td>
+    <td>Last Name</td>
+  </tr>
+  <% @employees.each do |employee_hash|%>
+    <tr>
+        <td><%= employee_hash["first_name"]%></td> 
+        <td><%= employee_hash["last_name"]%></td> 
+    </tr>
+  <% end %>
+</table>
