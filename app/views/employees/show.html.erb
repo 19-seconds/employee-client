@@ -1,3 +1,4 @@
 Full Name: <%= @employee["first_name"] %> <%= @employee["last_name"]%>
 <%= @employee["id"]%>
 
+<%= link_to "Fire Employee", "/employees/#{@employee['id']}", method: :delete %>
