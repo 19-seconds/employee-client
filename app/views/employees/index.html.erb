@@ -2,11 +2,17 @@
   <tr>
     <td>First Name</td>
     <td>Last Name</td>
+    <td>Birthdate</td>
+    <td>Email</td>
+    <td>SSN</td>
   </tr>
   <% @employees.each do |employee_hash|%>
     <tr>
-        <td><%= employee_hash["first_name"]%></td> 
-        <td><%= employee_hash["last_name"]%></td> 
+        <td><%= employee_hash["first_name"] %></td>
+        <td><%= employee_hash["last_name"] %></td>
+        <td><%= employee_hash["birthdate"] %></td>
+        <td><%= employee_hash["email"] %></td>
+        <td><%= employee_hash["ssn"] %></td> 
     </tr>
   <% end %>
 </table>

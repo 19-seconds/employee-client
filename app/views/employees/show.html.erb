@@ -1,4 +1,11 @@
-Full Name: <%= @employee["first_name"] %> <%= @employee["last_name"]%>
-<%= @employee["id"]%>
+<ul>
+  <li>First Name: <%= @employee.first_name %></li>
+  <li>Last Name: <%= @employee.last_name %></li>
+  <li>Birthdate: <%= @employee.birthdate %></li>
+  <li>Email: <%= @employee.email %></li>
+  <li>SSN: <%= @employee.ssn %></li>
+</ul>
 
-<%= link_to "Fire Employee", "/employees/#{@employee['id']}", method: :delete %>
+
+
+<%= link_to "Fire Employee", "/employees/#{@employee.id}", method: :delete %>
