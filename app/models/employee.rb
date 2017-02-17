@@ -11,4 +11,13 @@ class Employee
     @ssn = hash['ssn']
   end
 
+  def self.find(id)
+    employee_hash = Unirest.get("#{ENV['DOMAIN']}/employees/#{id}.json").body
+    Employee.new(employee_hash)
+  end
+
+  def self.all
+    #finish this
+  end
+
 end

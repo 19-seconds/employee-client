@@ -6,13 +6,13 @@
     <td>Email</td>
     <td>SSN</td>
   </tr>
-  <% @employees.each do |employee_hash|%>
+  <% @employees.each do |employee|%>
     <tr>
-        <td><%= employee_hash["first_name"] %></td>
-        <td><%= employee_hash["last_name"] %></td>
-        <td><%= employee_hash["birthdate"] %></td>
-        <td><%= employee_hash["email"] %></td>
-        <td><%= employee_hash["ssn"] %></td> 
+        <td><%= employee.first_name %></td>
+        <td><%= employee.last_name %></td>
+        <td><%= employee.birthdate %></td>
+        <td><%= employee.email %></td>
+        <td><%= employee.ssn %></td> 
     </tr>
   <% end %>
 </table>
