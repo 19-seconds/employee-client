@@ -5,12 +5,7 @@ class EmployeesController < ApplicationController
   end
 
   def index
-    employee_hashes = Unirest.get("#{ENV['DOMAIN']}/employees.json").body
-    @employees = []
-    employee_hashes.each do |employee_hash|
-      @employees << Employee.new(employee_hash)
-      # Employee.all
-    end
+    @employees = Employee.all
   end
 
   def new
